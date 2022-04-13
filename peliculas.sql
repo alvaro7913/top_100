@@ -34,8 +34,8 @@ SELECT COUNT(reparto) AS HarrisonFord FROM reparto WHERE reparto = 'Harrison For
 -- 6. Indicar las películas estrenadas entre los años 1990 y 1999 ordenadas por título de manera ascendente. (1 punto)
 SELECT pelicula, agnoEstreno FROM peliculas WHERE agnoEstreno BETWEEN 1990 AND 1999 ORDER BY pelicula ASC;
 
+-- 7. Hacer una consulta SQL que muestre los títulos con su longitud, la longitud debe ser nombrado para la consulta como “longitud_titulo”. (1 punto)
+SELECT pelicula, LENGTH (pelicula) AS longitud_titulo FROM peliculas;
 
--- 7. Hacer una consulta SQL que muestre los títulos con su longitud, la longitud debe ser
--- nombrado para la consulta como “longitud_titulo”. (1 punto)
--- 8. Consultar cual es la longitud más grande entre todos los títulos de las películas.
--- (2 punto)
+-- 8. Consultar cual es la longitud más grande entre todos los títulos de las películas. (2 punto)
+SELECT pelicula, LENGTH (pelicula) AS longitud_de_titulo FROM peliculas ORDER BY LENGTH (pelicula) DESC LIMIT 1;
